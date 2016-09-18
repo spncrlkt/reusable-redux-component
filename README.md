@@ -1,9 +1,19 @@
-Simple Reusable Component
+Simple Reusable React/Redux Component
 =====================
 
 ## Overview
 
 A simple method for creating shared React components that manage Redux state.
+
+
+## Checkout && run
+
+```
+git clone git@github.com:spncrlkt/reusable-redux-component.git && cd reusable-redux-component
+npm install
+npm start
+open http://localhost:3000
+```
 
 ## Motivating example
 
@@ -318,14 +328,3 @@ The reusable component's API is:
 reusing reducer functions in the domain's reducers and
 rendering the component with a componentId and its associated data,
 which is accessed through a reusable selector.
-
-
-### Runnin' it
-
-```
-git clone https://github.com/spncrlkt/reusable-redux-component
-cd reusable-redux-component
-npm install
-npm start
-open http://localhost:3000
-```
