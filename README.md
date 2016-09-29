@@ -23,7 +23,7 @@ which data is accessed through a reusable selector.
 ```
 
 ```javascript
-// reducer API
+// reducer API (state = state.domain)
 export default combineReducers({
   component: componentReducer('domainComponent', getComponentInitialState()),
 });
