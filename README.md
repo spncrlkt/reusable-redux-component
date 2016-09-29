@@ -17,6 +17,8 @@ which data is accessed through a reusable selector.
 
 ```javascript
 // component API
+const mapStateToProps = (state) => ({data: getDomainComponentData(state)})
+
 <ReusableComponent
   componentId='domainComponent'
   data={ data }/>
