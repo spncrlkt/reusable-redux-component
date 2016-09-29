@@ -5,6 +5,36 @@ Reusable React-Redux Connected Component
 
 A simple method for creating reusable React-Redux connected components.
 
+## Goal
+
+Our goal is to create a straightforward re-use API, where state management logic is encapsulated by the reusable component.
+The reusable component's API is:
+reusing reducer functions in the domain's reducers and
+rendering the component with a componentId and its associated data,
+which data is accessed through a reusable selector.
+
+## Reuse API
+
+```javascript
+// component API
+<ReusableComponent
+  componentId='domainComponent'
+  data={ data }/>
+```
+
+```javascript
+// reducer API
+export default combineReducers({
+  component: componentReducer('domainComponent', getComponentInitialState()),
+});
+```
+
+```javascript
+// selector API
+export const getDomainComponentData = (state) => getComponentData(state.domain.component);
+```
+
+
 ## Checkout && run
 
 ```
@@ -67,14 +97,6 @@ Not extremely complicated, but we don't want to duplicate that logic for each of
 
 We want to share the Header component in our `admin` and `user` domains,
 and we want the Header to control the state inside those domains.
-
-## Goal
-
-Our goal is to create a straightforward re-use API, where state management logic is encapsulated by the reusable component.
-The reusable component's API is:
-reusing reducer functions in the domain's reducers and
-rendering the component with a componentId and its associated data,
-which data is accessed through a reusable selector.
 
 ## Header Component
 
