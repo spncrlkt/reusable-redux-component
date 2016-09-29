@@ -1,10 +1,9 @@
-Simple Reusable React/Redux Component
+Reusable React-Redux Connected Component
 =====================
 
 ## Overview
 
-A simple method for creating shared React components that manage Redux state.
-
+A simple method for creating reusable React-Redux connected components.
 
 ## Checkout && run
 
