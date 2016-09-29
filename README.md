@@ -68,6 +68,13 @@ Not extremely complicated, but we don't want to duplicate that logic for each of
 We want to share the Header component in our `admin` and `user` domains,
 and we want the Header to control the state inside those domains.
 
+## Goal
+
+Our goal is to create a straightforward re-use API, where state management logic is encapsulated by the reusable component.
+The reusable component's API is:
+reusing reducer functions in the domain's reducers and
+rendering the component with a componentId and its associated data,
+which data is accessed through a reusable selector.
 
 ## Header Component
 
@@ -326,4 +333,4 @@ If the component gets more complex, our domain code shouldn't need to change.
 The reusable component's API is:
 reusing reducer functions in the domain's reducers and
 rendering the component with a componentId and its associated data,
-which is accessed through a reusable selector.
+which data is accessed through a reusable selector.
